@@ -36,7 +36,7 @@ function getDelay() {
 
 function updateStatus() {
   if(getDelay() > 5) {
-    $('#status').text('OK').css('background-color', 'green')
+    $('#status').text('OK').css('background-color', '#66BB66')
   } else {
     $('#status').text(temperatures[temperatures.length-1] + "\xb0C")
       .css('background-color', 'red')
