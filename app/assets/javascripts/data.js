@@ -2,9 +2,8 @@ var measurements = [];
 var delay = 0;
 
 function getData() {
-  console.log("test")
   $.get('/data', function(data) {
-    if(data['created_at'] != measurements[measurements.length-1]['created_at']) {
+    if(measurements.length == 0 || data['created_at'] != measurements[measurements.length-1]['created_at']) {
       measurements.push(data);
       delay = 0;
     } else {
