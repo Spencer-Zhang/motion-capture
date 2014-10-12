@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root 'measurements#index'
 
   put '/' => 'measurements#update'
+  get '/data' => 'measurements#get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
