@@ -55,8 +55,9 @@ function drawLines() {
     .y(function(d) { return y(d) })
 
   d3.select('#lines').append("svg:path").attr('d', line(temperatures))
-    .attr("stroke", "black")
+    .attr("stroke", "blue")
     .attr('fill', 'none')
+    .attr('stroke-width', '4')
 }
 
 $(function() {
@@ -66,8 +67,6 @@ $(function() {
 
   var lines = svg.append('g')
     .attr('id', 'lines')
-    .attr('stroke', 'blue')
-    .attr('stroke-width', '4')
 
   lines.append("svg:line")
     .attr("x1", x(-50))
