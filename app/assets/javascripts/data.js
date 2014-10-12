@@ -4,7 +4,7 @@ var temperatures = [];
 function getData() {
   $.get('/data', function(data) {
     measurements.push(data);
-    if(getDelay() > 4) {
+    if(getDelay() > 5) {
       temperatures.push(20)
     } else {
       temperatures.push(data['temperature'])
