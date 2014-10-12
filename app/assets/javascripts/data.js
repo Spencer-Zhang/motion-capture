@@ -60,6 +60,11 @@ function drawLines() {
 }
 
 $(function() {
+
+  $.get('/data', function(data) {
+    measurements.push(data);
+  })
+
   var svg = d3.select('#canvas').append('svg')
     .attr('width', 800)
     .attr('height', 300)
