@@ -60,11 +60,6 @@ function drawLines() {
 }
 
 $(function() {
-
-  $.get('/data', function(data) {
-    measurements.push(data);
-  })
-
   var svg = d3.select('#canvas').append('svg')
     .attr('width', 800)
     .attr('height', 300)
@@ -102,8 +97,16 @@ $(function() {
     .attr("y2", y(20))
     .attr('stroke', 'black')
 
+  $.get('/data', function(data) {
+    measurements.push(data);
+    measurements.push(data);
+    measurements.push(data);
+    measurements.push(data);    
 
-  setInterval(function() {
-    getData()
-  }, 1000);
+    setInterval(function() {
+      getData()
+    }, 1000);
+  })
+
+
 })
