@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141012081657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "data", force: true do |t|
+  create_table "measurements", force: true do |t|
     t.integer  "temperature"
     t.datetime "created_at"
     t.datetime "updated_at"
