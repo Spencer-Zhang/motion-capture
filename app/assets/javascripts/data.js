@@ -5,7 +5,7 @@ function getData() {
     measurements.push(data);
   })
 
-  $('#test').text(measurements[measurements.length - 1]);
+  $('#test').text(measurements[measurements.length - 1]['created_at']);
 }
 
 $(function() {
