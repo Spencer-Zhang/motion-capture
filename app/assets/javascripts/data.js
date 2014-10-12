@@ -72,7 +72,8 @@ $(function() {
     .attr("y1", y(0))
     .attr("x2", x(0))
     .attr("y2", y(0))
-    .attr('stroke', 'black')
+    .attr('stroke', 'blue')
+    .attr('stroke-width', '2')
 
   lines.selectAll("horizLines")
     .data(y.ticks(4)).enter()
