@@ -50,7 +50,6 @@ function drawLines() {
   d3.select('#lines').selectAll('path').remove()
 
   var line = d3.svg.line()
-    .interpolate('cardinal')
     .x(function(d,i) { return x(i - temperatures.length) })
     .y(function(d) { return y(d) })
 
