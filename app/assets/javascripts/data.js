@@ -3,7 +3,7 @@ var delay = 0;
 
 function getData() {
   $.get('/data', function(data) {
-    if(measurements.length == 0 || data['created_at'] != measurements[measurements.length-1]['created_at']) {
+    if(measurements.length > 0 || data['created_at'] != measurements[measurements.length-1]['created_at']) {
       measurements.push(data);
       delay = 0;
     } else {
