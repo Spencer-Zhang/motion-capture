@@ -1,6 +1,6 @@
 class MeasurementsController < ApplicationController
   def update
-    Measurement.create(params['temperature'].to_i)
+    Measurement.create(temperature:params['temperature'].to_i)
     render nothing:true
   end
 
